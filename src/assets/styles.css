@@ -1,0 +1,42 @@
+code {
+    font-size: 1.2em;
+}
+
+ul {
+    padding-inline-start: 20px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border: 1px solid #999;
+    font-size: 36px;
+    font-weight: bold;
+    margin-right: -1px;
+    margin-top: -1px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.square:hover {
+    background: #f7f7f7;
+}
+
+.board-row {
+    display: flex;
+    justify-content: center;
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+}
+
+.game-info {
+    margin-left: 20px;
+}
