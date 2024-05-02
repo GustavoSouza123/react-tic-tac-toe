@@ -20,9 +20,9 @@ function Board() {
     const winner = calculateWinner(squares);
     let status;
     if(winner) {
-        status = 'Winner: ' + (winner === 'X' ? '❌' : '⭕');
-        const jsConfetti = new JSConfetti();
         let emoji = winner === 'X' ? '❌' : '⭕';
+        status = 'Winner: ' + emoji;
+        const jsConfetti = new JSConfetti();
         jsConfetti.addConfetti({
             emojis: [emoji],
             emojiSize: 36,
