@@ -1,20 +1,15 @@
 import React from "react";
-import { useState } from "react";
 import Square from "./Square";
 import JSConfetti from "js-confetti";
 
-function Board() {
-    const [xIsNext, setXIsNext] = useState(true);
-    const [squares, setSquares] = useState(Array(9).fill(null));
-
+function Board({ xIsNext, squares, onPlay }) {
     function handleClick(i) {
         if(squares[i] || calculateWinner(squares)) {
             return;
         }
         const nextSquares = squares.slice();
         nextSquares[i] = xIsNext ? 'X' : 'O';
-        setSquares(nextSquares);
-        setXIsNext(!xIsNext);
+        onPlay(nextSquares);
     }
 
     const winner = calculateWinner(squares);
